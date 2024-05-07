@@ -1,5 +1,27 @@
 #!/bin/bash
 
+# Function to check if Conda is installed
+check_conda_installed() {
+    type conda >/dev/null 2>&1 || { echo >&2 "Conda is not installed."; return 1; }
+}
+
+# Install Conda if it is not installed
+install_conda() {
+    echo "Installing Miniconda..."
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+    bash miniconda.sh -b -p $HOME/miniconda
+    export PATH="$HOME/miniconda/bin:$PATH"
+    echo 'export PATH="$HOME/miniconda/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
+    conda init bash
+    echo "Miniconda installed."
+}
+
+# Check if Conda is installed, install if not
+if ! check_conda_installed; then
+    install_conda
+fi
+
 # Deactivate any active environments
 conda deactivate
 
