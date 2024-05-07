@@ -1,0 +1,100 @@
+/* Base settings for dark mode, using blue and yellow tones */
+body {
+    color: #E1C16E; /* Soft yellow for text */
+    background-color: #0A1931; /* Deep blue background */
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: lowercase;
+}
+
+/* Header styles to use yellow */
+h1, h2, h3, h4, h5, h6 {
+    color: #FFC300; /* Bright yellow */
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: lowercase;
+}
+
+/* Sidebar customization for dark mode with blue tones */
+.streamlit-expanderHeader, .streamlit-expanderContent {
+    background-color: #185ADB; /* Medium blue */
+    color: #FFC300; /* Yellow text */
+}
+.stSidebar > div:first-child {
+    background-color: #0A1931; /* Consistent deep blue background */
+    color: #E1C16E;
+}
+
+/* Text input, select, and date input styling for better visibility */
+.stTextInput, .stSelectbox, .stDateInput, .stTextArea {
+    background-color: #1C2B2D; /* Darker blue variant */
+    color: #FFC300; /* Yellow text for contrast */
+    border: 1px solid #185ADB;
+}
+
+/* Button styling with yellow and blue theme */
+button {
+    background-color: #185ADB; /* Blue background */
+    color: #FFC300; /* Yellow text */
+    border: none;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #FFC300; /* Yellow background on hover */
+    color: #185ADB; /* Blue text on hover */
+}
+
+/* Styling for tables, with alternating row colors for better readability */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #1A374D;}
+tr:nth-child(odd) {background-color: #406882;}
+
+/* Link styling with a focus on accessibility and visual appeal */
+a {
+    color: #FFC300; /* Yellow links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Custom scrollbars for a cohesive look */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #185ADB; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFC300; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #E1C16E; 
+}
+
+/* Enhancements for plots to fit the dark theme with blue/yellow tones */
+.js-plotly-plot .plotly {
+    background-color: #0A1931; /* Consistent background for plots */
+}
+
+.plot-container .modebar {
+    color: #E1C16E;
+    background-color: #185ADB;
+}
